@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        canvas{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600" height="400">  
+    </canvas>
+    <script>
+        //获取DOM结点
+        let canvas = document.querySelector('canvas')
+        // 获取上下文
+        let ctx = canvas.getContext('2d')
+        //绘制矩形第一种方式 参数：x y w h
+        //这种不能设置填充颜色
+        ctx.strokeRect(100,200,100,200)
+        //第二种方式  填充的颜色可以替换
+        //绘制图像之前设置好填充颜色
+        ctx.fillStyle = 'skyblue'
+        ctx.fill()
+        ctx.fillRect(300,200,100,200)
+    </script>
+</body>
+</html>
